@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1515112964f613dd46de7b787107da34",
+    "revision": "3a77ee102e2be80d7a267a71820f6247",
     "url": "/QR-Code-Scanner/index.html"
   },
   {
