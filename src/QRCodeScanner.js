@@ -44,8 +44,8 @@ class QRCodeScanner extends Component {
   }
   render(){
     const previewStyle = {
-      height: 240,
-      width: 320,
+      height: 400,
+      width: 300,
     }
 
     return(
@@ -62,36 +62,37 @@ class QRCodeScanner extends Component {
             </div>
           :
             // <p>{this.state.jsonData.Name}</p>
-            <div className="table-responsive-md w-50 m-auto">
-              <table className="table table-bordered">
-                <tbody>
-                  <tr>
-                    <td>Name</td>
-                    <td>{this.state.jsonData.Name}</td>
-                  </tr>
-                  <tr>
-                    <td>Email</td>
-                    <td>{this.state.jsonData.Email}</td>
-                  </tr>
-                  <tr>
-                    <td>Phone</td>
-                    <td>{this.state.jsonData.Phone}</td>
-                  </tr>
-                  <tr>
-                    <td>Address</td>
-                    <td>{this.state.jsonData.Address}</td>
-                  </tr>
-                  <tr>
-                    <td>Website</td>
-                    <td>{this.state.jsonData.Website}</td>
-                  </tr>
-                  <tr>
-                    <td>Image</td>
-                    <td></td>
-
-                  </tr>
-                </tbody>
-              </table>
+            <div className="table-responsive">
+              <div className="col-12 col-sm-12 col-md-8 col-lg-6 m-auto">
+                <table className="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <td>Name</td>
+                      <td>{this.state.jsonData.Name}</td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td>{this.state.jsonData.Email}</td>
+                    </tr>
+                    <tr>
+                      <td>Phone</td>
+                      <td>{this.state.jsonData.Phone}</td>
+                    </tr>
+                    <tr>
+                      <td>Address</td>
+                      <td>{this.state.jsonData.Address}</td>
+                    </tr>
+                    <tr>
+                      <td>Website</td>
+                      <td>{this.state.jsonData.Website}</td>
+                    </tr>
+                    <tr>
+                      <td>Image</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
         }
       </div>
