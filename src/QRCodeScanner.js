@@ -10,8 +10,10 @@ class QRCodeScanner extends Component {
       result: 'No result',
       jsonData: [],
       displayScanner: true,
+      cameraView:'rear'
     }
 
+    this.handleChangeCamera = this.handleChangeCamera.bind(this);
     this.handleScan = this.handleScan.bind(this);
     this.handleError = this.handleError.bind(this);
   }
@@ -24,6 +26,9 @@ class QRCodeScanner extends Component {
       this.getJsonFormatData(data);
     }
 
+  }
+  handleChangeCamera(e){
+    this.setState({cameraView:e.target.value});
   }
   getJsonFormatData(data){
     const res = data.split(',');
@@ -44,20 +49,29 @@ class QRCodeScanner extends Component {
   }
   render(){
     const previewStyle = {
-      height: 400,
-      width: 300,
+      height: '100%',
+      width: '100%',
     }
 
     return(
       <div>
         {
           this.state.displayScanner ?
-            <div className="text-center col-md-auto justify-content-center d-flex">
+            <div className="text-center col-md-auto justify-content-center">
+              <div>
+              <select onChange={this.handleChangeCamera}>
+                <option value="front">Front Camera</option>
+                <option value="rear">Rear Camera</option>
+              </select>
+              <button onClick={this.openImageDialog}>Open</button>
+              </div>
               <QrReader
                 delay={this.state.delay}
                 style={previewStyle}
                 onError={this.handleError}
                 onScan={this.handleScan}
+                facingMode={this.cameraView}
+                
                 />
             </div>
           :
