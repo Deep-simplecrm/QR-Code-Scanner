@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/QR-Code-Scanner/precache-manifest.07e913c5ddf1a5ebb1e1fe8aab92e37c.js"
+  "/QR-Code-Scanner/precache-manifest.57a9b82bd30009ed0f1aa73483ae9cd4.js"
 );
 
 self.addEventListener('message', (event) => {
