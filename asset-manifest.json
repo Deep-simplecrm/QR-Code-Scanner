@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/QR-Code-Scanner/static/css/main.523f09c5.chunk.css",
-    "main.js": "/QR-Code-Scanner/static/js/main.31fc1165.chunk.js",
-    "main.js.map": "/QR-Code-Scanner/static/js/main.31fc1165.chunk.js.map",
+    "main.js": "/QR-Code-Scanner/static/js/main.5146e465.chunk.js",
+    "main.js.map": "/QR-Code-Scanner/static/js/main.5146e465.chunk.js.map",
     "runtime-main.js": "/QR-Code-Scanner/static/js/runtime-main.31d8737c.js",
     "runtime-main.js.map": "/QR-Code-Scanner/static/js/runtime-main.31d8737c.js.map",
     "static/js/2.d0d70bd9.chunk.js": "/QR-Code-Scanner/static/js/2.d0d70bd9.chunk.js",
     "static/js/2.d0d70bd9.chunk.js.map": "/QR-Code-Scanner/static/js/2.d0d70bd9.chunk.js.map",
     "index.html": "/QR-Code-Scanner/index.html",
-    "precache-manifest.b7341bce1fa926effa98bee5e8f7fd2a.js": "/QR-Code-Scanner/precache-manifest.b7341bce1fa926effa98bee5e8f7fd2a.js",
+    "precache-manifest.d0c8656d4b945864dd1011bef2693a44.js": "/QR-Code-Scanner/precache-manifest.d0c8656d4b945864dd1011bef2693a44.js",
     "service-worker.js": "/QR-Code-Scanner/service-worker.js",
     "static/css/main.523f09c5.chunk.css.map": "/QR-Code-Scanner/static/css/main.523f09c5.chunk.css.map",
     "static/js/2.d0d70bd9.chunk.js.LICENSE.txt": "/QR-Code-Scanner/static/js/2.d0d70bd9.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.31d8737c.js",
     "static/js/2.d0d70bd9.chunk.js",
     "static/css/main.523f09c5.chunk.css",
-    "static/js/main.31fc1165.chunk.js"
+    "static/js/main.5146e465.chunk.js"
   ]
 }
