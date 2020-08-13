@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import QrReader from 'react-qr-scanner';
+//import  CameraList  from "./CameraList";
 const { createCanvas } = require('canvas');
+
 
 class QRCodeScanner extends Component {
   constructor(props){
@@ -10,12 +12,41 @@ class QRCodeScanner extends Component {
       result: 'No result',
       jsonData: [],
       displayScanner: true,
-      cameraView:'rear'
-    }
-
+      cameraView:'rear',
+      deviceId:'',
+      facingMode:'rear',
+      legacyMode:false,
+      cameraList:[]      
+    }    
     this.handleChangeCamera = this.handleChangeCamera.bind(this);
+    this.handleFacingModeChange = this.handleFacingModeChange.bind(this);
     this.handleScan = this.handleScan.bind(this);
     this.handleError = this.handleError.bind(this);
+    this.handleLoad = this.handleLoad.bind(this);
+  }
+  
+  componentDidMount(){
+    // if(!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+    //   //alert("enumerateDevices() not supported.");
+    //   //return;
+    // }   
+    // let self =this;
+    // navigator.mediaDevices.enumerateDevices()
+    // .then(function(devices) {
+    //   let deviceNo = 1;
+    //   devices.forEach(function(device) {
+        
+    //     if(device.kind=='videoinput')
+    //     {
+            
+    //         let deviceList = {name:'Camera '+deviceNo, id:device.deviceId};
+    //         deviceNo++;      
+    //         self.setState({cameraList:self.state.cameraList.concat(deviceList)});
+    //     }
+    //   });
+    // });
+  
+    
   }
   handleScan(data){
     if(data != null){
@@ -27,8 +58,34 @@ class QRCodeScanner extends Component {
     }
 
   }
-  handleChangeCamera(e){
-    this.setState({cameraView:e.target.value});
+  handleLoad(){
+    var _props = this.props,
+	          delay = _props.delay,
+	          onLoad = _props.onLoad;
+
+	      var preview = this.els.preview;
+	      preview.play();
+
+	      if (typeof onLoad == 'function') {
+	        onLoad();
+	      }
+
+	      if (typeof delay == 'number') {
+	        this.timeout = setTimeout(this.check, delay);
+	      }
+
+	      // Some browsers call loadstart continuously
+	      preview.removeEventListener('loadstart', this.handleLoadStart);
+	    
+  }
+  
+  handleChangeCamera(e){   
+    this.setState({deviceId:e.target.value});
+
+  }
+  handleFacingModeChange(e){   
+    //alert(e.target.value);
+    this.setState({facingMode:e.target.value});
   }
   getJsonFormatData(data){
     const res = data.split(',');
@@ -55,27 +112,46 @@ class QRCodeScanner extends Component {
 
     return(
       <div>
+        
+    
+        <p>
+        <button onClick={this.handleFacingModeChange} onClickCapture={this.handleFacingModeChange} value="rear">Back Camera</button>
+        &nbsp;&nbsp;&nbsp;
+        <button onClick={this.handleFacingModeChange} onClickCapture={this.handleFacingModeChange} value="front">Front Camera</button> 
+        
+        </p>
+        {/* <select onChange={this.handleFacingModeChange}>
+          <option value="front">Front Camera</option>
+          <option value="rear">Back Camera</option>
+        </select> */}
+        {/* <select onChange={this.handleChangeCamera}>
+          
+          {this.state.cameraList.map((row) => (<option key={row.id} value={row.id}>{row.name}</option>))}
+        </select> */}
+        {/* <p>If camera not supported</p>
+        <input type="button" value="Submit QR Code" onClick={this.openImageDialog} /> */}
         {
           this.state.displayScanner ?
             <div className="text-center col-md-auto justify-content-center">
-              <div>
-              <select onChange={this.handleChangeCamera}>
-                <option value="front">Front Camera</option>
-                <option value="rear">Rear Camera</option>
-              </select>
-              <button onClick={this.openImageDialog}>Open</button>
+              <div>    
+                
+              
               </div>
               <QrReader
                 delay={this.state.delay}
                 style={previewStyle}
                 onError={this.handleError}
                 onScan={this.handleScan}
-                facingMode={this.cameraView}
-                
-                />
+                facingMode={this.state.facingMode}               
+	              legacyMode= {this.state.legacyMode}
+	              ref= 'reader'     
+              />
             </div>
           :
-            // <p>{this.state.jsonData.Name}</p>
+          <div>
+            <hr />
+            <p><button onClick={()=>window.location.reload()}>Scan Again</button></p>
+            <hr />
             <div className="table-responsive">
               <div className="col-12 col-sm-12 col-md-8 col-lg-6 m-auto">
                 <table className="table table-bordered">
@@ -107,6 +183,7 @@ class QRCodeScanner extends Component {
                   </tbody>
                 </table>
               </div>
+            </div>
             </div>
         }
       </div>
