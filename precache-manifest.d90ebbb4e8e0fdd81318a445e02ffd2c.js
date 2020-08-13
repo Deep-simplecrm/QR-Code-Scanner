@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "54537177467ae94b1dd9c32047c96bb5",
+    "revision": "7b25eaa8ac07cc271dc1d85611db56f1",
     "url": "/QR-Code-Scanner/index.html"
   },
   {
-    "revision": "e893c85aec8f237e2625",
+    "revision": "73f5f989e821e83b624f",
     "url": "/QR-Code-Scanner/static/css/main.523f09c5.chunk.css"
   },
   {
-    "revision": "1435e91233e17639c7cc",
-    "url": "/QR-Code-Scanner/static/js/2.86f53711.chunk.js"
+    "revision": "61df2644156f104e3b30",
+    "url": "/QR-Code-Scanner/static/js/2.d0d70bd9.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/QR-Code-Scanner/static/js/2.86f53711.chunk.js.LICENSE.txt"
+    "url": "/QR-Code-Scanner/static/js/2.d0d70bd9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e893c85aec8f237e2625",
-    "url": "/QR-Code-Scanner/static/js/main.28807b7e.chunk.js"
+    "revision": "73f5f989e821e83b624f",
+    "url": "/QR-Code-Scanner/static/js/main.213f597f.chunk.js"
   },
   {
     "revision": "3be1d57ae2f3b51cd513",
