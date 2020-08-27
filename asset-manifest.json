@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/QR-Code-Scanner/static/css/main.523f09c5.chunk.css",
-    "main.js": "/QR-Code-Scanner/static/js/main.82cc61f5.chunk.js",
-    "main.js.map": "/QR-Code-Scanner/static/js/main.82cc61f5.chunk.js.map",
+    "main.css": "/QR-Code-Scanner/static/css/main.5f361e03.chunk.css",
+    "main.js": "/QR-Code-Scanner/static/js/main.7fca627a.chunk.js",
+    "main.js.map": "/QR-Code-Scanner/static/js/main.7fca627a.chunk.js.map",
     "runtime-main.js": "/QR-Code-Scanner/static/js/runtime-main.31d8737c.js",
     "runtime-main.js.map": "/QR-Code-Scanner/static/js/runtime-main.31d8737c.js.map",
-    "static/js/2.a186e7a2.chunk.js": "/QR-Code-Scanner/static/js/2.a186e7a2.chunk.js",
-    "static/js/2.a186e7a2.chunk.js.map": "/QR-Code-Scanner/static/js/2.a186e7a2.chunk.js.map",
+    "static/js/2.d9b20664.chunk.js": "/QR-Code-Scanner/static/js/2.d9b20664.chunk.js",
+    "static/js/2.d9b20664.chunk.js.map": "/QR-Code-Scanner/static/js/2.d9b20664.chunk.js.map",
     "index.html": "/QR-Code-Scanner/index.html",
-    "precache-manifest.e05d1828f4d5e236068521afd9be9709.js": "/QR-Code-Scanner/precache-manifest.e05d1828f4d5e236068521afd9be9709.js",
+    "precache-manifest.84db3e4b4d26e7b00c91df1c7bd191b5.js": "/QR-Code-Scanner/precache-manifest.84db3e4b4d26e7b00c91df1c7bd191b5.js",
     "service-worker.js": "/QR-Code-Scanner/service-worker.js",
-    "static/css/main.523f09c5.chunk.css.map": "/QR-Code-Scanner/static/css/main.523f09c5.chunk.css.map",
-    "static/js/2.a186e7a2.chunk.js.LICENSE.txt": "/QR-Code-Scanner/static/js/2.a186e7a2.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/QR-Code-Scanner/static/media/logo.ee7cd8ed.svg"
+    "static/css/main.5f361e03.chunk.css.map": "/QR-Code-Scanner/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.d9b20664.chunk.js.LICENSE.txt": "/QR-Code-Scanner/static/js/2.d9b20664.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/QR-Code-Scanner/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.31d8737c.js",
-    "static/js/2.a186e7a2.chunk.js",
-    "static/css/main.523f09c5.chunk.css",
-    "static/js/main.82cc61f5.chunk.js"
+    "static/js/2.d9b20664.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.7fca627a.chunk.js"
   ]
 }
